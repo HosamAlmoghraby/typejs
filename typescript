@@ -1,0 +1,51 @@
+let firstName: string = 'Hosam';
+let lastName: string = 'Almoghraby';
+let fullName: string;
+
+function buildName(firstName: string, lasttName: string): string {
+    return firstName + ' ' + lasttName;
+}
+
+fullName = buildName(firstName, lastName);
+
+document.body.innerHTML = fullName;
+
+// -----------------------------------------------------------------//
+
+class Name1 {
+    fullName1: string;
+    
+    constructor(private firstName1: string, private lastName1: string) {
+    }
+
+    buildName(): string {
+        this.fullName1 = this.firstName1 + ' ' + this.lastName1;
+        return this.fullName1;
+    }
+}
+
+let fullName1 = new Name1('Moh.', 'Sawas')
+
+document.body.innerHTML = fullName1.buildName();
+
+// -----------------------------------------------------------------//
+
+class Name2 {
+    firstName2: string;
+    lastName2: string;
+    fullName2: string;
+
+    constructor(firstName2: string, lastName2: string) {
+        this.firstName2 = firstName2;
+        this.lastName2 = lastName2;
+    }
+
+    buildName(): string {
+        this.fullName2 = this.firstName2 + ' ' + this.lastName2;
+        return this.fullName2;
+    }
+}
+
+let fullName2 = new Name2('Diaa', 'Alkhatib')
+
+document.body.innerHTML = fullName2.buildName();
